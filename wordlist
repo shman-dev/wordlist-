@@ -1,0 +1,19 @@
+import random
+
+class WordList:
+    def __init__(self):
+        # Prompt the user for three letters
+        self.harf = input("Enter the first letter: ")
+        self.harf2 = input("Enter the second letter: ")
+        self.harf3 = input("Enter the third letter: ")
+
+    def create_word(self):
+        # Create a random word using the input letters
+        letters = [self.harf, self.harf2, self.harf3]
+        random.shuffle(letters)
+        return ''.join(letters)
+
+# Example usage:
+word_list = WordList()
+generated_word = word_list.create_word()
+print(f"Generated word: {generated_word}")
